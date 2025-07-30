@@ -17,19 +17,24 @@ function DeleteNoteButton({ noteId, deleteNoteLocally }: Props) {
     const noteIdParam = useSearchParams().get("noteId") || "";
 
     const [isPending, startTransition] = useTransition()
+
+
     const handleDeleteNote = () => {
 
         startTransition(async () => {
             const { errorMessage } = await DeleteNoteAction(noteId);
+
             if (!errorMessage) {
                 toast.success("Note deleted successfully", { description: "Your note has been deleted." });
                 deleteNoteLocally(noteId);
 
                 if (noteId === noteIdParam) {
                     router.replace("/");
-                } else {
-                    toast.error("There was an error deleting the note", { description: errorMessage });
                 }
+
+            } else {
+
+                toast.error("There was an error deleting the note", { description: errorMessage });
             }
         });
     }
