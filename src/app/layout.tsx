@@ -11,7 +11,7 @@ import NoteProvider from "@/providers/NoteProvider";
 
 
 export const metadata: Metadata = {
-  title: "The Notes",
+  title: "The NOTES",
 };
 
 export default function RootLayout({
