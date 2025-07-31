@@ -30,7 +30,7 @@ async function Header() {
                 />
 
                 <h1 className="flex flex-col pb-1 text-2xl font-semibold leading-6">
-                    GOAT <span>Notes</span>
+                    THE <span>Notes</span>
                 </h1>
             </Link>
 
