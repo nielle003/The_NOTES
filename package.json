@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "migrate": "dotenv -e .env.local -- npx prisma generate && dotenv -e .env.local -- npx prisma migrate dev"
+    "migrate": "dotenv -e .env.local -- npx prisma generate && dotenv -e .env.local -- npx prisma migrate dev",
+    "postinstall": "prisma generate"
   },
   "prisma": {
     "schema": "src/db/schema.prisma"
@@ -23,7 +24,7 @@
     "@radix-ui/react-slot": "^1.2.3",
     "@radix-ui/react-tooltip": "^1.2.7",
     "@supabase/ssr": "^0.6.1",
-    "@supabase/supabase-js": "^2.52.1",
+    "@supabase/supabase-js": "^2.53.0",
     "autoprefixer": "^10.4.21",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
