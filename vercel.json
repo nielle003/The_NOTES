@@ -1,0 +1,11 @@
+{
+    "buildCommand": "npm run build",
+    "devCommand": "npm run dev",
+    "env": {
+        "DATABASE_URL": "@database_url",
+        "SUPABASE_URL": "@supabase_url",
+        "SUPABASE_ANON_KEY": "@supabase_anon_key",
+        "GEMINI_API_KEY": "@gemini_api_key",
+        "NEXT_PUBLIC_BASE_URL": "@next_public_base_url"
+    }
+}
